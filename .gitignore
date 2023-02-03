@@ -1,0 +1,11 @@
+*
+!/**/
+!*.*
+.vscode
+a.out
+*.exe
+*.zip
+*.pdf
+site
+TODO.md
+__pycache__
