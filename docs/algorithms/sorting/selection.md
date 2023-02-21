@@ -8,7 +8,7 @@ This works as follow, you pick the smallest element and put it in first,
 and then you pick the smallest form the remaining elements and put it in the second, and so on.
 
 ```cpp
-{{ include_file('algorithms/sorting/selection.cpp') }}
+{{ include_file('selection.cpp') }}
 ```
 
 ## Analysis

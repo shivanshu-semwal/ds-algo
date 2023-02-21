@@ -11,7 +11,7 @@ This works as follow,
   the right position of element you want to insert is not found.
 
 ```cpp
-{{ include_file('algorithms/sorting/insertion.cpp') }}
+{{ include_file('insertion.cpp') }}
 ```
 
 ## Analysis

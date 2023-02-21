@@ -6,7 +6,7 @@ title: Home
 
 [![Contributors](https://img.shields.io/github/contributors/shivanshu-semwal/ds-algo.svg?style=flat-square)](https://github.com/shivanshu-semwal/ds-algo/graphs/contributors)
 [![Pull Requests](https://img.shields.io/github/issues-pr/shivanshu-semwal/ds-algo.svg?style=flat-square)](https://github.com/shivanshu-semwal/ds-algo/pulls)
-[![Closed Pull Requests](https://img.shields.io/github/issues-pr-closed/shivanshu-semwal/s-algo.svg?style=flat-square)](https://github.com/shivanshu-semwal/ds-algo/pulls?q=is%3Apr+is%3Aclosed)
+[![Closed Pull Requests](https://img.shields.io/github/issues-pr-closed/shivanshu-semwal/ds-algo.svg?style=flat-square)](https://github.com/shivanshu-semwal/ds-algo/pulls?q=is%3Apr+is%3Aclosed)
 
 This repos/site contains my competitive programming solutions
 and some templates and scripts that I use for competitive programming.

@@ -11,7 +11,7 @@ This works as follow,
 - till we sort by the no. of digits in the largest no.
 
 ```cpp
-{{ include_file('algorithms/sorting/radix.cpp') }}
+{{ include_file('radix.cpp') }}
 ```
 
 ## Analysis

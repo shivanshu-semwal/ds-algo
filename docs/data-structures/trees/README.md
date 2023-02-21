@@ -3,11 +3,11 @@
 ## Binary Tree
 
 ```c
-{{ include_file('data-structures/trees/binary-trees.c') }}
+{{ include_file('binary-trees.c') }}
 ```
 
 ## Binary Heap
 
 ```c
-{{ include_file('data-structures/trees/heap.c') }}
+{{ include_file('heap.c') }}
 ```

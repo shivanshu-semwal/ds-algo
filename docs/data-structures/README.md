@@ -25,21 +25,21 @@ from the point of view of who is going to implement it.
 
 ### Outline
 
-- **Data Structure**
-    - **Classification:**
+- Data Structure
+    - Classification:
         - Linear: static, dynamic
         - Non Linear
-- **Array**
+- Array
     - dynamic array
     - create, insert, delete
-- **Linked List**
-    - **Types:** Single, double, circular
-    - **Operation:** insertion, deletion, searching
-- **Stack:** push, pop
-- **Queue:**
+- Linked List
+    - Types: Single, double, circular
+    - Operation: insertion, deletion, searching
+- Stack: push, pop
+- Queue:
     - Priority Queue
-- **Tree**
-    - [Binary Tree](trees/README.md)
+- Tree
+    - Binary Tree
         - Binary Heap
         - Binary search tree
             - avl tree
@@ -51,8 +51,8 @@ from the point of view of who is going to implement it.
     - suffix array and suffix tree
     - B-Tree
     - k dimensional tree
-- **[Graph](graphs/README.md)**
-- **Hashing**
+- Graph
+- Hashing
 
 ## A note about programming language
 

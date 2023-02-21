@@ -9,11 +9,11 @@ node in the list.
 ## Single Linked List
 
 ```c
-{{ include_file('data-structures/linked-list/linked-list.c') }}
+{{ include_file('linked-list.c') }}
 ```
 
 ## Double Linked List
 
 ```c
-{{ include_file('data-structures/linked-list/double-linked-list.c') }}
+{{ include_file('double-linked-list.c') }}
 ```

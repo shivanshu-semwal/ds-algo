@@ -14,7 +14,7 @@ This works as follow,
   will appear before it in the array.
 
 ```cpp
-{{ include_file('algorithms/sorting/count.cpp') }}
+{{ include_file('count.cpp') }}
 ```
 
 ## Analysis

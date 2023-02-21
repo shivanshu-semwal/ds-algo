@@ -12,7 +12,7 @@ Also keep a flag to check if any swaps are made in some iteration, if no swaps
 are made you can stop as the array is already sorted.
 
 ```cpp
-{{ include_file('algorithms/sorting/bubble.cpp') }}
+{{ include_file('bubble.cpp') }}
 ```
 
 ## Analysis

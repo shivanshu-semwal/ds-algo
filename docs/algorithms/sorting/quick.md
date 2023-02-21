@@ -11,7 +11,7 @@ This works as follow,
 - now recursively sort the two halves
 
 ```cpp
-{{ include_file('algorithms/sorting/quick.cpp') }}
+{{ include_file('quick.cpp') }}
 ```
 
 ## Analysis

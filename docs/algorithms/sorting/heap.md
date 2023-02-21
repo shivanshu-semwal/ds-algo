@@ -13,7 +13,7 @@ _NOTE:_ In this code I used extra space for the heap, but I can use heapify on t
 so that no extra space will be required.
 
 ```cpp
-{{ include_file('algorithms/sorting/heap.cpp') }}
+{{ include_file('heap.cpp') }}
 ```
 
 ## Analysis

@@ -11,7 +11,7 @@ This works as follow,
 - merge both sorted array
 
 ```cpp
-{{ include_file('algorithms/sorting/merge.cpp') }}
+{{ include_file('merge.cpp') }}
 ```
 
 ## Analysis

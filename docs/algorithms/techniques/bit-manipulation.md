@@ -23,7 +23,7 @@ int noBits = sizeof int * 8;
 
 - The result of a right-shift of a signed negative number is implementation-dependent.
   So better not use `-2 >> 3`.
-- If the `n` is negative the it is undefined behaviour.
+- If the `n` is negative the it is undefined behavior.
 
 ## how to check if i'th bit is set or not - use and
 
