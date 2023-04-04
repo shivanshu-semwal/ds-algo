@@ -2,8 +2,6 @@
 title: Introduction
 ---
 
-## Algorithm
-
 Algorithm is series of steps to solve a problem.
 In computer science an algorithm is used to solve problems.
 
@@ -15,16 +13,16 @@ these are provided by analysis of algorithms
 
 ### Outline
 
-- Algorithms - what is algorithm, space and time complexity
-- Time complexity
+- [Algorithms - what is algorithm, space and time complexity](./algorithm.md)
+- [Time complexity](./complexity-analysis.md)
     - Big $O$ notation
     - lower bound, upper bound, tight bound
     - pseudo polynomial time, amortized time complexity
-- Arrays
+- [Arrays](./arrays/README.md)
     - sorting and searching
-- Trees
+- [Trees](./trees/README.md)
     - Types: n-ary, complete tree, binary
-    - Binary Trees
+    - [Binary Trees](./trees/binary-tree/README.md)
         - Traversal: - inorder, preorder, postorder, level order
         - Operations: insert, delete, search
         - Binary Heap

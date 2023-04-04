@@ -1,35 +1,40 @@
 site_name: Data Structures and Algorithms
 theme:
   name: material
+  custom_dir: theme
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: deep blue
-      accent: deep blue
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: deep blue
-      accent: deep blue
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
-  logo: favicon.ico
-  favicon: favicon.ico
+  - media: "(prefers-color-scheme)"
+    scheme: default
+    accent: deep purple
+    toggle:
+      icon: material/brightness-auto
+      name: "Switch to light mode"
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    accent: amber
+    toggle:
+      icon: material/brightness-2
+      name: "Switch to system theme"
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    accent: deep purple
+    toggle:
+      icon: material/brightness-5
+      name: "Switch to dark mode"
+  logo: assets/favicon.ico
+  favicon: assets/favicon.ico
   icon:
     repo: fontawesome/brands/github
   features:
     - navigation.tracking
     - navigation.tabs
-    - toc.integrate
-docs_dir: docs
-repo_url: https://github.com/shivanshu-semwal/ds-algo
-edit_uri: edit/master/docs/
+    - navigation.indexes
+# docs_dir: docs
+# repo_url: https://github.com/shivanshu-semwal/ds-algo
+# edit_uri: edit/master/docs/
 copyright: Copyright Shivanshu Semwal
 extra_css:
-  - stylesheets/extra.css
+  - assets/stylesheets/extra.css
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 markdown_extensions:
@@ -51,3 +56,5 @@ plugins:
   - search
   - git-revision-date-localized:
       enable_creation_date: true
+watch:
+  - ./theme

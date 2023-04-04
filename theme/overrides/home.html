@@ -1,0 +1,25 @@
+{% extends "main.html" %}
+{% block extrahead %}
+  <link rel="stylesheet" href="{{ 'assets/stylesheets/home.css?v=3.3.0' | url }}">
+  {{ super() }}
+{% endblock %}
+{% block tabs %}
+  {{ super() }}
+  <style>.md-content > .md-typeset h1{visibility:hidden;font-size:0;}.md-button{margin-top:.5rem;}</style>
+  <section class="mdx-container">
+    <div class="md-grid md-typeset">
+      <div class="mdx-hero">
+        <div class="mdx-hero__content">
+          <h1>Data Structures and Algorithms.</h1>
+          <p>Computer science is no more about computers than astronomy is about telescopes.</p>
+          <a href="algorithms/" class="md-button md-button--primary">
+            Algorithms
+          </a>
+          <a href="data-structures//" class="md-button">
+            Data Structures
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
