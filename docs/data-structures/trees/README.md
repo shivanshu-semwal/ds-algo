@@ -1,13 +1,11 @@
-# Introduction
+# Trees
 
-## Binary Tree
+Trees is recursive data structure, and algorithm related to trees are
+often recursive too.
 
-```c
-{{ include_file('binary-trees.c') }}
-```
+Trees
 
-## Binary Heap
-
-```c
-{{ include_file('heap.c') }}
-```
+- consists of nodes
+- each node can have children nodes.
+- there is only one root node, a node which don't have a parent
+- if there are more than one root node it is called a forest

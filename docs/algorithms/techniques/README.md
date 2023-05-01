@@ -1,4 +1,4 @@
-# Introduction
+# Algorithmic Techniques
 
 Several methods are used to solve problems in
 competitive programming.
@@ -43,3 +43,7 @@ Here are some common method which are used:
 - Trial & Error
 - Union Find
 - Unique Paths
+
+## Unique Articles
+
+- <https://en.wikipedia.org/wiki/Cycle_detection>

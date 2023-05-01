@@ -1,4 +1,4 @@
-# Introduction
+# Sorting
 
 Sorting is one of the basic operation you can perform on
 a given collection of item.

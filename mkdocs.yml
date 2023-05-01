@@ -54,7 +54,5 @@ markdown_extensions:
 plugins:
   - macros
   - search
-  - git-revision-date-localized:
-      enable_creation_date: true
 watch:
   - ./theme

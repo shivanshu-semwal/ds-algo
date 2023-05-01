@@ -1,33 +1,39 @@
----
-title: Introduction
----
+# Algorithm
 
-Algorithm is series of steps to solve a problem.
-In computer science an algorithm is used to solve problems.
+Algorithm is series of steps to solve a problem. In computer science an algorithm is used to solve problems.
+Algorithm is a finite sequence of rigorous instructions, typically used to solve a class of specific problems or to perform a computation.
 
-### Why study analysis of algorithms?
+## Measuring space and time complexity
+
+How we measure space and time complexity of algorithm depend on the computational model
+we are trying to use. Generally we use turing model of computing.
+
+## Why study analysis of algorithms?
 
 Some algorithms are fast some are slow. Some take more space and some less.
 To choose which algorithm to use we should have some analytical tools;
 these are provided by analysis of algorithms
 
-### Outline
+## Outline
 
-- [Algorithms - what is algorithm, space and time complexity](./algorithm.md)
-- [Time complexity](./complexity-analysis.md)
+- Algorithms - what is algorithm, space and time complexity
+- [Time complexity](../analysis/time-complexity.md)
     - Big $O$ notation
     - lower bound, upper bound, tight bound
     - pseudo polynomial time, amortized time complexity
-- [Arrays](./arrays/README.md)
+- [Arrays](../data-structures/arrays/README.md)
     - sorting and searching
-- [Trees](./trees/README.md)
+- [Trees](../data-structures/trees/README.md)
     - Types: n-ary, complete tree, binary
-    - [Binary Trees](./trees/binary-tree/README.md)
+    - [Binary Trees](../data-structures/trees/binary-tree/README.md)
         - Traversal: - inorder, preorder, postorder, level order
         - Operations: insert, delete, search
         - Binary Heap
         - Binary search tree
             - Self balancing trees - AVL trees, red black trees
+        - Segment Trees
+        - Trie
+        - Binary Index Trees
 - Graphs
     - Types: directed, undirected, weighted, cyclic, acyclic
     - Traversal: bfs, dfs
@@ -51,7 +57,7 @@ these are provided by analysis of algorithms
     - Pattern Matching: KMP method, rabin karp method
     - Trie
 - Hashing: simple hashing, collision on hashing
-- Algorithm Techniques
+- [Algorithm Techniques](techniques/README.md)
     - Two Pointer
     - Monotonic Stack
     - Sliding Window
@@ -60,3 +66,7 @@ these are provided by analysis of algorithms
     - Divide and Conquer - binary search, merge sort, quick sort
     - Bitwise algorithms
 - P vs NP: P, NP, NP-Complete, NP-Hard
+
+## Resources
+
+- <https://en.wikipedia.org/wiki/Algorithm>

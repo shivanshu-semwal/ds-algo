@@ -9,3 +9,9 @@ It is often used to implement a priority queue.
 - to implement a binary heap we can use either representation
 - to insert a element, we inset it at the end of the tree and bubble it's way up
 - to remove a top element we replace last element with the top one and bubble it's way down
+
+## Sample Implementation
+
+```c
+{{ include_file('heap.c') }}
+```

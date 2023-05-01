@@ -85,3 +85,9 @@ A unbalance bst will have a linear time complexity for searching.
 
 - AVL Tree
 - Red-Black Tree
+
+## Sample Implementation of a Binary tree
+
+```c
+{{ include_file('binary-trees.c') }}
+```
