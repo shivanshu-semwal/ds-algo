@@ -1,7 +1,6 @@
 # Greedy Algorithms
 
-- Are optimization algorithms where we have objective to
-  maximize or minimize stuff.
+- Are optimization algorithms where we have objective to maximize or minimize stuff.
 - Here at each step we make a choice and choose the optimal
   case which will lead to solution.
 

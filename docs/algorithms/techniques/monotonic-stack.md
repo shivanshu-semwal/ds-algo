@@ -1,7 +1,7 @@
 # Monotonic Stack
 
 - when to use stack
-- when( you have $O(n^2)$ solution and the inner loop is dependent on j
+- when you have $O(n^2)$ solution and the inner loop is dependent on j
     - then you can have better solution in $O(n)$
 
 ```c
