@@ -22,8 +22,8 @@ hide:
     - <https://open.kattis.com>
     - <https://projecteuler.net/>
     - <https://cses.fi/problemset/>
-    - <https://practice.geeksforgeeks.org/home/>  [extensive]
-    - <https://leetcode.com/problemset/all/>     [recommended/prescribed]
+    - <https://practice.geeksforgeeks.org/home/> [extensive]
+    - <https://leetcode.com/problemset/all/> [recommended/prescribed]
     - <https://binarysearch.com/> [interactive]
     - <https://www.codewars.com/dashboard> [interactive]
     - <https://exercism.org/tracks/javascript> [interactive]

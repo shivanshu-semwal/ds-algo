@@ -1,18 +1,19 @@
 # Graphs
 
-- [Types of Graphs](./graphs-types.md)
+- Types of Graphs
 - Graph Traversal
-    - [BFS]
-    - [DFS]
+    - BFS
+    - DFS
 - Operations
     - Check for cycle in graph
     - Find connected components
+        - Kosaraju's algorithm - <https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm>
 - Minimum spanning tree
     - [Kruskal Algorithm]
     - Prim algorithms
     - Brovuka'a Algorithm
 - Shortest path from source to all other nodes
-    - [djkstra's](shortest-path/djstra.md)
+    - djkstra's
     - bellman ford's
 - Shortest path between all nodes to all other node
     - floyd warshall
