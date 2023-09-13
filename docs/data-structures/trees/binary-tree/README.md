@@ -32,7 +32,7 @@ Binary Trees can be represented in two basic ways:
 
 ### With Self Referential Structures
 
-```c
+```cpp
 struct Node{
     int val;
     Node *left;
@@ -46,5 +46,5 @@ struct Node{
 
 ## Types
 
-- [binary heap](./binary-heap.md)
-- [binary search tree](./binary-search-tree.md)
+- Binary heap
+- Binary search tree

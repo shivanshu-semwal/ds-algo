@@ -1,6 +1,4 @@
----
-title: P vs NP
----
+# P vs NP
 
 ## P - polynomial time
 

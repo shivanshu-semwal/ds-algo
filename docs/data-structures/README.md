@@ -29,36 +29,33 @@ from the *point of view of who is going to implement it*.
 
 Here is a small list of ADT's:
 
-- Collection
-- Container
-- List - using arrays, using linked list
+- List
+    - list is a collections of items, where we can add items and remove items
+    - implemented using arrays, using linked list
     - `getElementAt(i)`, `find(i)`, `insert()`, `remove()`
     - list can be implemented using arrays and linked list
 - String
+    - string is a collection of ordered characters
     - usually same operations as list
     - using arrays, using linked list
 - Set
+    - set is a collection of unique items
     - `insert()` `remove()` `find()` `size()`
     - using arrays, using linked list, using linked list which are connected in form of a tree
-- Multiset
-    - `insert()` `remove()` `find()` `size()`
-    - using arrays, using linked list
 - Map
-    - `getValue(key)`
-    - using hash map
-- Multimap
+    - map is a collection of key value pairs
     - `getValue(key)`
     - using hash map
 - Graph
     - `addNode()` `addEdge(x, y)` `getChildren()`
-    - using adjacency list, adjacency graph
-- Tree - using (arrays and linked list) or using only linked list, or only using arrays
+    - implemented using adjacency list, adjacency graph
+- Tree
+    - implemented using (arrays and linked list) or using only linked list, or only using arrays
     - Binary Trees are often used in context of data structures representing nodes with right and left child
 - Stack
+    - represnets a stack of items, where we can push items and pop items
 - Queue
-- Priority queue
-- Double-ended queue
-- Double-ended priority queue
+    - represents a queues of items, where we can add items at end of queue and remove items from front of queue
 
 ## Outline
 
@@ -93,9 +90,6 @@ Here is a small list of ADT's:
 
 ## A note about programming language
 
-Many languages provides some basic type of data structures and data
-types (primitive data types). If you use low level programming language you
-use to implement the data structure you will have more control over it's
-execution. For example take C and Python, in python you don't have pointers
-so you will not be able to do certain optimization on data structures.
-But in C you will have to write more code.
+- Every languages provides some basic type of data structures and data types (primitive data types).
+- If you use low level programming language you have to implement the data structures on you own and will have more control over it's execution,
+  but you will have to write more code.

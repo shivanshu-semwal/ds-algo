@@ -3,25 +3,26 @@
 - Types of Graphs
 - Graph Traversal
     - BFS
+        - BFS Tree
     - DFS
+        - DFS Tree
 - Operations
     - Check for cycle in graph
     - Find connected components
         - Kosaraju's algorithm - <https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm>
+        - Tarjans Algorithm - <https://en.wikipedia.org/wiki/Tarjan%27s_strongly_connected_components_algorithm>
 - Minimum spanning tree
-    - [Kruskal Algorithm]
+    - Kruskal Algorithm
     - Prim algorithms
     - Brovuka'a Algorithm
 - Shortest path from source to all other nodes
-    - djkstra's
-    - bellman ford's
+    - Djkstra's Algorithm
+    - Bellman ford's
 - Shortest path between all nodes to all other node
-    - floyd warshall
-    - Johnson's Algorithm
+    - Floyd Warshall  - <https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm>
+    - Johnson's Algorithm - <https://en.wikipedia.org/wiki/Johnson%27s_algorithm>
 - Directed Acyclic Graph (DAG)
-    - topological traversal
-- dfs-tree
-- bfs-tree
+    - Topological traversal
 - Connectivity
     - Path between two vertices
     - Bridges in a graph

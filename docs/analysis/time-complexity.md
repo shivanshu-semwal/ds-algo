@@ -1,6 +1,4 @@
----
-title: Time complexity
----
+# Time Complexity
 
 ## Time Complexity from Constraints
 
