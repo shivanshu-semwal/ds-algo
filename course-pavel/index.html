@@ -1,0 +1,3373 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../analysis/time-complexity/">
+      
+      
+        <link rel="next" href="../data-structures/">
+      
+      
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Pavel Mavrin - Data Structures and Algorithms</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pavel-mavrin" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Data Structures and Algorithms" class="md-header__button md-logo" aria-label="Data Structures and Algorithms" data-md-component="logo">
+      
+  <img src="../assets/favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Data Structures and Algorithms
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Pavel Mavrin
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="Switch to system theme"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to system theme" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 2c-1.82 0-3.53.5-5 1.35C8 5.08 10 8.3 10 12s-2 6.92-5 8.65C6.47 21.5 8.18 22 10 22a10 10 0 0 0 10-10A10 10 0 0 0 10 2Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../resources/" class="md-tabs__link">
+        
+  
+    
+  
+  Resources
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../algorithms/" class="md-tabs__link">
+          
+  
+    
+  
+  Algorithms
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../analysis/amortized-complexity/" class="md-tabs__link">
+          
+  
+    
+  
+  Analysis
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+    
+  
+  Course pavel
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../data-structures/" class="md-tabs__link">
+          
+  
+    
+  
+  Data structures
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Data Structures and Algorithms" class="md-nav__button md-logo" aria-label="Data Structures and Algorithms" data-md-component="logo">
+      
+  <img src="../assets/favicon.ico" alt="logo">
+
+    </a>
+    Data Structures and Algorithms
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../algorithms/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Algorithms
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Algorithms
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithms/flow-chart/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flow Chart for solving problem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../algorithms/techniques/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Techniques
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Techniques
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithms/techniques/backtracking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backtracking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithms/techniques/bit-manipulation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bit Manipulation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithms/techniques/divide-and-conquer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Divide and Conquer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithms/techniques/dynamic-programming/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dynamic Programming
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithms/techniques/greedy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Greedy Algorithms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithms/techniques/monotonic-stack/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Monotonic Stack
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithms/techniques/randomized-algorithm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Randomized Algorithm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithms/techniques/sliding-window/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sliding window
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithms/techniques/sweep-line/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sweep line
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithms/techniques/two-pointer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Two pointer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Analysis
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Analysis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/amortized-complexity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Amortized Complexity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/masters-theorem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Master's Theorem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/p-np/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    P vs NP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/time-complexity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Time Complexity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  <span class="md-ellipsis">
+    Course pavel
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Course pavel
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../data-structures/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Data structures
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Data structures
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Abstract data type
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Abstract data type
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../data-structures/abstract-data-type/dequeue/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Dequeue
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Dequeue
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../data-structures/abstract-data-type/queue/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Queue
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Queue
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../data-structures/abstract-data-type/stack/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Stack
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Stack
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../data-structures/arrays/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Arrays
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Arrays
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../data-structures/arrays/sorting/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Sorting
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_3_2" id="__nav_6_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Sorting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-structures/arrays/sorting/bubble/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bubble Sort
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-structures/arrays/sorting/count/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Count Sort
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-structures/arrays/sorting/heap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Heap Sort
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-structures/arrays/sorting/insertion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Insertion Sort
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-structures/arrays/sorting/merge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Merge Sort
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-structures/arrays/sorting/quick/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quick Sort
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-structures/arrays/sorting/radix/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Radix Sort
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-structures/arrays/sorting/selection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Selection Sort
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../data-structures/graphs/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Graphs
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Graphs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-structures/graphs/graphs-types/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graphs Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../data-structures/graphs/algorithms/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Algorithms
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_4_3" id="__nav_6_4_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Algorithms
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4_3_2" id="__nav_6_4_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Bridges
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_4_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Bridges
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-structures/graphs/algorithms/bridges/bridges/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bridges
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4_3_3" id="__nav_6_4_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Minimum spanning tree
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_4_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Minimum spanning tree
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-structures/graphs/algorithms/minimum-spanning-tree/kruskal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kruskal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-structures/graphs/algorithms/minimum-spanning-tree/prims/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prims
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4_3_4" id="__nav_6_4_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Shortest path
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_4_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Shortest path
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-structures/graphs/algorithms/shortest-path/djstra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dijkstras Shortest Path Algorithm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4_3_5" id="__nav_6_4_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Traversal
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_4_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Traversal
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-structures/graphs/algorithms/traversal/bfs-tree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BFS-Trees
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-structures/graphs/algorithms/traversal/dfs-tree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DFS-Trees
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4_4" id="__nav_6_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dag
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Dag
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-structures/graphs/dag/topological-sort/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Topological sort
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4_5" id="__nav_6_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Disjoint union
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Disjoint union
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-structures/graphs/disjoint-union/disjoint-union/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Disjoint Union
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../data-structures/linked-list/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Linked list
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            Linked list
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../data-structures/trees/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Trees
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            Trees
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../data-structures/trees/binary-tree/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Binary tree
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_6_2" id="__nav_6_6_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Binary tree
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6_2_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../data-structures/trees/binary-tree/binary-heap/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Binary heap
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_6_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Binary heap
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_6_2_3" id="__nav_6_6_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Binary search tree
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_6_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Binary search tree
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-structures/trees/binary-tree/binary-search-tree/binary-search-tree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Binary Search Tree
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6_2_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../data-structures/trees/binary-tree/traversal/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Traversal
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_6_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Traversal
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_6_3" id="__nav_6_6_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Segment tree
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Segment tree
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-structures/trees/segment-tree/segment-tree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Segment Trees
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#s01e01-algorithms-time-complexity-merge-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      S01E01. Algorithms. Time complexity. Merge sort
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s01e02-data-structures-binary-heap-heap-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      S01E02. Data structures. Binary Heap. Heap sort
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s01e03-quick-sort-order-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      S01E03. Quick sort. Order statistics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s01e04-lower-bounds-for-sorting-radix-sort-sorting-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      S01E04. Lower bounds for sorting. Radix sort. Sorting networks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s01e05-binary-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      S01E05. Binary Search
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s01e06-stacks-queues-amortized-cost" class="md-nav__link">
+    <span class="md-ellipsis">
+      S01E06. Stacks. Queues. Amortized cost
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s01e07-linked-lists-pointer-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      S01E07. Linked Lists. Pointer Machine
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s01e08-disjoint-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      S01E08. Disjoint Sets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s01e09-fibonacci-heap" class="md-nav__link">
+    <span class="md-ellipsis">
+      S01E09. Fibonacci Heap
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s01e10-dynamic-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      S01E10. Dynamic programming
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s01e11-dynamic-programming-part-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      S01E11. Dynamic programming. Part 2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s01e12-knapsack-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      S01E12. Knapsack Problem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s01e13-dp-on-subsets-dp-on-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      S01E13. DP on subsets, DP on profiles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s01e14-hash-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      S01E14. Hash tables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s01e15-perfect-hashing-cuckoo-hashing-bloom-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      S01E15. Perfect hashing, cuckoo hashing, Bloom filter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-complexity-of-union-find-inverse-ackermann-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time Complexity of Union-Find (inverse Ackermann function)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eval-link-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eval-Link-Update
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s02e01-segment-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      S02E01. Segment Tree
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s02e02-segment-trees-lazy-propagation" class="md-nav__link">
+    <span class="md-ellipsis">
+      S02E02. Segment Trees, Lazy Propagation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s02e03-fenwick-tree-sparse-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      S02E03. Fenwick Tree, Sparse Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s02e04-2d-segment-tree-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      S02E04. 2D Segment Tree Problems
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s02e05-binary-search-tree-avl-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      S02E05. Binary Search Tree, AVL tree
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s02e06-treaps-implicit-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      S02E06. Treaps, implicit keys
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s02e07-splay-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      S02E07. Splay Tree
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s02e08-scapegoat-tree-list-order-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      S02E08. Scapegoat Tree, List Order Maintenance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s02e09-binary-lifting-lca-farach-colton-and-bender-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      S02E09. Binary Lifting. LCA. Farach-Colton and Bender Algorithm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s02e09-heavy-light-decomposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      S02E09. Heavy-Light Decomposition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s02e11-link-cut-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      S02E11. Link-Cut Tree
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s02e12-euler-tour-tree-tarjans-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      S02E12. Euler Tour Tree, Tarjan's Algorithm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s02e13-centroid-decomposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      S02E13. Centroid Decomposition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s02e14-external-memory-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      S02E14. External Memory Algorithms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s02e15-complexity-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      S02E15. Complexity Classes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s03e01-graphs-depth-first-search-topological-sorting" class="md-nav__link">
+    <span class="md-ellipsis">
+      S03E01. Graphs. Depth First Search. Topological sorting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s03e02-strongly-connected-components-2-sat" class="md-nav__link">
+    <span class="md-ellipsis">
+      S03E02. Strongly Connected Components, 2-SAT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s03e03-bridges-articulation-points-euler-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      S03E03. Bridges, Articulation Points, Euler Cycle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s03e04-dominator-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      S03E04. Dominator Tree
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s03e05-minimum-spanning-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      S03E05. Minimum Spanning Tree
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s03e06-breadth-first-search-dijkstras-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      S03E06. Breadth-First Search, Dijkstra's Algorithm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s03e07-bellman-ford-and-floyd-warshall-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      S03E07. Bellman-Ford and Floyd-Warshall Algorithms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s03e08-graph-games" class="md-nav__link">
+    <span class="md-ellipsis">
+      S03E08. Graph Games
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s03e09-strings-hashing-kmp-z-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      S03E09. Strings. Hashing. KMP. Z Algorithm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s03e10-finite-state-automata" class="md-nav__link">
+    <span class="md-ellipsis">
+      S03E10. Finite State Automata
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s03e11-aho-corasick-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      S03E11. Aho Corasick Algorithm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s03e12-suffix-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      S03E12. Suffix Array
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s03e13-suffix-tree-ukkonens-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      S03E13. Suffix Tree. Ukkonen's Algorithm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s03e14-y-fast-trie" class="md-nav__link">
+    <span class="md-ellipsis">
+      S03E14. Y-Fast Trie
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s03e15-fusion-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      S03E15. Fusion Tree
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s04e01-maximum-matchings-in-bipartite-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      S04E01. Maximum Matchings in Bipartite Graphs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s04e02-maximum-matchings-in-non-bipartite-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      S04E02. Maximum Matchings in Non-Bipartite Graphs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s04e03-flows-cuts-ford-fulkerson-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      S04E03. Flows, cuts. Ford-Fulkerson algorithm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s04e04-flows-dinics-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      S04E04. Flows. Dinic's algorithm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s04e05-hopcroft-karp-algorithm-push-relabel" class="md-nav__link">
+    <span class="md-ellipsis">
+      S04E05. Hopcroft-Karp algorithm, Push-Relabel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s04e06-assignment-problem-hungarian-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      S04E06. Assignment Problem. Hungarian Algorithm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s04e07-minimum-cost-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      S04E07. Minimum Cost Flows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s04e08-global-minimum-cuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      S04E08. Global Minimum Cuts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s04e09-linear-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      S04E09. Linear Programming
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s04e10-number-theory-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      S04E10. Number Theory Algorithms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s04e11-basic-cryptography-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      S04E11. Basic Cryptography Algorithms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s04e12-fast-fourier-transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      S04E12. Fast Fourier Transform
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s04e13-approximation-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      S04E13. Approximation Algorithms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s04e14-parallel-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      S04E14. Parallel Algorithms
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="pavel-mavrin">Pavel Mavrin</h1>
+<h2 id="s01e01-algorithms-time-complexity-merge-sort">S01E01. Algorithms. Time complexity. Merge sort</h2>
+<h2 id="s01e02-data-structures-binary-heap-heap-sort">S01E02. Data structures. Binary Heap. Heap sort</h2>
+<h2 id="s01e03-quick-sort-order-statistics">S01E03. Quick sort. Order statistics</h2>
+<h2 id="s01e04-lower-bounds-for-sorting-radix-sort-sorting-networks">S01E04. Lower bounds for sorting. Radix sort. Sorting networks</h2>
+<h2 id="s01e05-binary-search">S01E05. Binary Search</h2>
+<h2 id="s01e06-stacks-queues-amortized-cost">S01E06. Stacks. Queues. Amortized cost</h2>
+<h2 id="s01e07-linked-lists-pointer-machine">S01E07. Linked Lists. Pointer Machine</h2>
+<h2 id="s01e08-disjoint-sets">S01E08. Disjoint Sets</h2>
+<h2 id="s01e09-fibonacci-heap">S01E09. Fibonacci Heap</h2>
+<h2 id="s01e10-dynamic-programming">S01E10. Dynamic programming</h2>
+<h2 id="s01e11-dynamic-programming-part-2">S01E11. Dynamic programming. Part 2</h2>
+<h2 id="s01e12-knapsack-problem">S01E12. Knapsack Problem</h2>
+<h2 id="s01e13-dp-on-subsets-dp-on-profiles">S01E13. DP on subsets, DP on profiles</h2>
+<h2 id="s01e14-hash-tables">S01E14. Hash tables</h2>
+<h2 id="s01e15-perfect-hashing-cuckoo-hashing-bloom-filter">S01E15. Perfect hashing, cuckoo hashing, Bloom filter</h2>
+<h2 id="time-complexity-of-union-find-inverse-ackermann-function">Time Complexity of Union-Find (inverse Ackermann function)</h2>
+<h2 id="eval-link-update">Eval-Link-Update</h2>
+<h2 id="s02e01-segment-tree">S02E01. Segment Tree</h2>
+<h2 id="s02e02-segment-trees-lazy-propagation">S02E02. Segment Trees, Lazy Propagation</h2>
+<h2 id="s02e03-fenwick-tree-sparse-table">S02E03. Fenwick Tree, Sparse Table</h2>
+<h2 id="s02e04-2d-segment-tree-problems">S02E04. 2D Segment Tree Problems</h2>
+<h2 id="s02e05-binary-search-tree-avl-tree">S02E05. Binary Search Tree, AVL tree</h2>
+<h2 id="s02e06-treaps-implicit-keys">S02E06. Treaps, implicit keys</h2>
+<h2 id="s02e07-splay-tree">S02E07. Splay Tree</h2>
+<h2 id="s02e08-scapegoat-tree-list-order-maintenance">S02E08. Scapegoat Tree, List Order Maintenance</h2>
+<h2 id="s02e09-binary-lifting-lca-farach-colton-and-bender-algorithm">S02E09. Binary Lifting. LCA. Farach-Colton and Bender Algorithm</h2>
+<h2 id="s02e09-heavy-light-decomposition">S02E09. Heavy-Light Decomposition</h2>
+<h2 id="s02e11-link-cut-tree">S02E11. Link-Cut Tree</h2>
+<h2 id="s02e12-euler-tour-tree-tarjans-algorithm">S02E12. Euler Tour Tree, Tarjan's Algorithm</h2>
+<h2 id="s02e13-centroid-decomposition">S02E13. Centroid Decomposition</h2>
+<h2 id="s02e14-external-memory-algorithms">S02E14. External Memory Algorithms</h2>
+<h2 id="s02e15-complexity-classes">S02E15. Complexity Classes</h2>
+<h2 id="s03e01-graphs-depth-first-search-topological-sorting">S03E01. Graphs. Depth First Search. Topological sorting</h2>
+<h2 id="s03e02-strongly-connected-components-2-sat">S03E02. Strongly Connected Components, 2-SAT</h2>
+<h2 id="s03e03-bridges-articulation-points-euler-cycle">S03E03. Bridges, Articulation Points, Euler Cycle</h2>
+<h2 id="s03e04-dominator-tree">S03E04. Dominator Tree</h2>
+<h2 id="s03e05-minimum-spanning-tree">S03E05. Minimum Spanning Tree</h2>
+<h2 id="s03e06-breadth-first-search-dijkstras-algorithm">S03E06. Breadth-First Search, Dijkstra's Algorithm</h2>
+<h2 id="s03e07-bellman-ford-and-floyd-warshall-algorithms">S03E07. Bellman-Ford and Floyd-Warshall Algorithms</h2>
+<h2 id="s03e08-graph-games">S03E08. Graph Games</h2>
+<h2 id="s03e09-strings-hashing-kmp-z-algorithm">S03E09. Strings. Hashing. KMP. Z Algorithm</h2>
+<h2 id="s03e10-finite-state-automata">S03E10. Finite State Automata</h2>
+<h2 id="s03e11-aho-corasick-algorithm">S03E11. Aho Corasick Algorithm</h2>
+<h2 id="s03e12-suffix-array">S03E12. Suffix Array</h2>
+<h2 id="s03e13-suffix-tree-ukkonens-algorithm">S03E13. Suffix Tree. Ukkonen's Algorithm</h2>
+<h2 id="s03e14-y-fast-trie">S03E14. Y-Fast Trie</h2>
+<h2 id="s03e15-fusion-tree">S03E15. Fusion Tree</h2>
+<h2 id="s04e01-maximum-matchings-in-bipartite-graphs">S04E01. Maximum Matchings in Bipartite Graphs</h2>
+<h2 id="s04e02-maximum-matchings-in-non-bipartite-graphs">S04E02. Maximum Matchings in Non-Bipartite Graphs</h2>
+<h2 id="s04e03-flows-cuts-ford-fulkerson-algorithm">S04E03. Flows, cuts. Ford-Fulkerson algorithm</h2>
+<h2 id="s04e04-flows-dinics-algorithm">S04E04. Flows. Dinic's algorithm</h2>
+<h2 id="s04e05-hopcroft-karp-algorithm-push-relabel">S04E05. Hopcroft-Karp algorithm, Push-Relabel</h2>
+<h2 id="s04e06-assignment-problem-hungarian-algorithm">S04E06. Assignment Problem. Hungarian Algorithm</h2>
+<h2 id="s04e07-minimum-cost-flows">S04E07. Minimum Cost Flows</h2>
+<h2 id="s04e08-global-minimum-cuts">S04E08. Global Minimum Cuts</h2>
+<h2 id="s04e09-linear-programming">S04E09. Linear Programming</h2>
+<h2 id="s04e10-number-theory-algorithms">S04E10. Number Theory Algorithms</h2>
+<h2 id="s04e11-basic-cryptography-algorithms">S04E11. Basic Cryptography Algorithms</h2>
+<h2 id="s04e12-fast-fourier-transform">S04E12. Fast Fourier Transform</h2>
+<h2 id="s04e13-approximation-algorithms">S04E13. Approximation Algorithms</h2>
+<h2 id="s04e14-parallel-algorithms">S04E14. Parallel Algorithms</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright Shivanshu Semwal
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tracking", "navigation.tabs", "navigation.indexes"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

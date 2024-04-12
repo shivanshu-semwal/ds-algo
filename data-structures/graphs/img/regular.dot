@@ -1,0 +1,10 @@
+graph reg{
+    subgraph {
+        b
+        c
+        rank=same;
+    }
+    a -- b;
+    c -- a;
+    b -- c;
+}
