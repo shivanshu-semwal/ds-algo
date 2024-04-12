@@ -10,7 +10,7 @@ hide:
     - <https://www.codechef.com>
     - <https://codeforces.com>
     - <https://www.hackerearth.com>
-    - <https://www.hackerrank.com/dashboard>
+    - <https://www.hackerrank.com>
     - <https://leetcode.com>
     - <https://atcoder.jp/home>
     - <https://www.topcoder.com>
@@ -22,11 +22,11 @@ hide:
     - <https://open.kattis.com>
     - <https://projecteuler.net/>
     - <https://cses.fi/problemset/>
-    - <https://practice.geeksforgeeks.org/home/> [extensive]
-    - <https://leetcode.com/problemset/all/> [recommended/prescribed]
-    - <https://binarysearch.com/> [interactive]
-    - <https://www.codewars.com/dashboard> [interactive]
-    - <https://exercism.org/tracks/javascript> [interactive]
+    - <https://practice.geeksforgeeks.org/>
+    - <https://leetcode.com/>
+    - <https://binarysearch.com>
+    - <https://www.codewars.com>
+    - <https://exercism.org/tracks/javascript>
 
 ??? note "Visualizations"
     - <https://visualgo.net/en>
@@ -63,6 +63,5 @@ hide:
     - <https://codeforces.com/blog/entry/98621>
     - <https://www.youtube.com/c/Errichto/playlists>
     - <https://www.youtube.com/c/SecondThread/playlists>
-    - <https://www.youtube.com/user/MrHulasingh25/playlists>
-    - <https://www.youtube.com/watch?v=4KAQ6UViDoE> [recommended]
-    - <https://blog.shahjalalshohag.com/topic-list/> [must-read]
+    - <https://blog.shahjalalshohag.com/topic-list/>
+    - <https://www.youtube.com/watch?v=oWgLjhM-6XE&list=PLrS21S1jm43igE57Ye_edwds_iL7ZOAG4>

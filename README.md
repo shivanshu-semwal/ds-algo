@@ -1,3 +1,3 @@
 # Data Structure and Algorithms
 
-Contains resources and notes realted to **algorithms** and **data structures**.
+Contains resources and notes related to **algorithms** and **data structures**.

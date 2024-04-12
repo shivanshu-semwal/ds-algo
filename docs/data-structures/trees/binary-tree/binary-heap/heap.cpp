@@ -57,7 +57,7 @@ public:
     Heap::heapifyHelper(storage, 0);
   }
 
-  bool empty() {
+  inline bool empty() {
     return storage.empty();
   }
 
