@@ -7,61 +7,39 @@ hide:
 # Resources
 
 ??? note "Platforms and competitions"
-    - <https://www.codechef.com>
-    - <https://codeforces.com>
-    - <https://www.hackerearth.com>
-    - <https://www.hackerrank.com>
-    - <https://leetcode.com>
-    - <https://atcoder.jp/home>
-    - <https://www.topcoder.com>
-    - <https://www.spoj.com>
-    - <https://www.interviewbit.com>
-    - <https://www.lintcode.com>
-    - <https://onlinejudge.org>
-    - <https://acm.timus.ru>
-    - <https://open.kattis.com>
-    - <https://projecteuler.net/>
-    - <https://cses.fi/problemset/>
-    - <https://practice.geeksforgeeks.org/>
-    - <https://leetcode.com/>
-    - <https://binarysearch.com>
-    - <https://www.codewars.com>
-    - <https://exercism.org/tracks/javascript>
+    - Competitive Programming
+        - <https://codeforces.com> - in russian and english
+        - <https://atcoder.jp/home> - in japanese and english
+        - <https://www.codechef.com>
+    - Learn some Programming Language
+        - <https://exercism.org>
+        - <https://www.hackerrank.com>
+        - <https://www.codewars.com>
+    - Interview Questions
+        - <https://leetcode.com>
+        - <https://www.lintcode.com>
+        - <https://open.kattis.com>
+        - <https://practice.geeksforgeeks.org/>
+        - <https://www.hackerearth.com>
+        - <https://www.interviewbit.com>
+    - Online Judges
+        - <https://onlinejudge.org> also called UVa - <https://en.wikipedia.org/wiki/UVa_Online_Judge>
+        - <https://www.spoj.com> - also have vast problems library and programming language support
+        - <https://acm.timus.ru>
+    - Mathematics
+        - <https://projecteuler.net/>
+        - <https://cses.fi/problemset/>
 
 ??? note "Visualizations"
+    Visualizations help us to understand algorithms and data structures in a more intuitive way.
+
     - <https://visualgo.net/en>
     - <https://www.cs.usfca.edu/~galles/visualization/Algorithms.html>
     - <https://github.com/algorithm-visualizer/algorithm-visualizer>
 
 ??? note "Cheat Sheets"
+    - <https://github.com/TheAlgorithms> - algorithms implemented in almost all programming languages
     - <https://cooervo.github.io/Algorithms-DataStructures-BigONotation/>
-    - <https://github.com/TheAlgorithms>
 
-??? note "Reading"
-    - <https://jeffe.cs.illinois.edu/teaching/algorithms/> [rigorous]
-
-??? note "Problems Classified according to topics"
-    - <https://www.educative.io/courses/grokking-the-coding-interview> [paid]
-    - <https://gist.github.com/tykurtz/3548a31f673588c05c89f9ca42067bc4>
-    - <https://algo.monster>
-    - <https://www.techinterviewhandbook.org/>
-    - <https://medium.com/interviewnoodle/grokking-leetcode-a-smarter-way-to-prepare-for-coding-interviews-e86d5c9fe4e1>
-    - <https://pepcoding.com/faangList2.0>
-    - <https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/>
-    - <https://www.techinterviewhandbook.org/>
-    - <<https://medium.com/coders-mojo/>
-
-??? note "Solutions Archive"
-    - <https://leetcode.ca/>
-    - <https://wentao-shao.gitbook.io/leetcode/>
-
-??? note "Advanced Competitive Programming Hacks"
-    - <https://codeforces.com/blog/entry/95106>
-    - <https://blog.shahjalalshohag.com/topic-list/>
-    - <https://github.com/ShahjalalShohag/Competitive-Programming-A-Complete-Guideline>
-    - <https://codeforces.com/blog/entry/99660>
-    - <https://codeforces.com/blog/entry/98621>
-    - <https://www.youtube.com/c/Errichto/playlists>
-    - <https://www.youtube.com/c/SecondThread/playlists>
-    - <https://blog.shahjalalshohag.com/topic-list/>
-    - <https://www.youtube.com/watch?v=oWgLjhM-6XE&list=PLrS21S1jm43igE57Ye_edwds_iL7ZOAG4>
+??? note "Books"
+    - <https://jeffe.cs.illinois.edu/teaching/algorithms/>
