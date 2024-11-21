@@ -1,0 +1,7 @@
+digraph dag{
+    a -> b -> d;
+    a -> c -> d;
+    c -> e;
+    a -> d -> e;
+    a -> e;
+}
