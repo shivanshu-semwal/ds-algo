@@ -2,7 +2,6 @@ BasedOnStyle: LLVM
 Language: Cpp
 DerivePointerAlignment: false
 PointerAlignment: Left
-BasedOnStyle: LLVM
 UseTab: Never
 IndentWidth: 2
 TabWidth: 2
