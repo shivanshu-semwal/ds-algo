@@ -10,7 +10,6 @@
 - longest path between pair of vertices
 - longest path in dag
 
-
 ```cpp
 #include <bits/stdc++.h>
 

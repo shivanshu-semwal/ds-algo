@@ -2,35 +2,36 @@
 
 - Types of Graphs
 - Graph Traversal
-    - BFS
-        - BFS Tree
-    - DFS
-        - DFS Tree
-- Operations
-    - Check for cycle in graph
-    - Find connected components
-        - Kosaraju's algorithm - <https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm>
-        - Tarjans Algorithm - <https://en.wikipedia.org/wiki/Tarjan%27s_strongly_connected_components_algorithm>
-- Minimum spanning tree
-    - Kruskal Algorithm
-    - Prim algorithms
-    - Brovuka'a Algorithm
-- Shortest path from source to all other nodes
-    - Djkstra's Algorithm
-    - Bellman ford's
-- Shortest path between all nodes to all other node
-    - Floyd Warshall  - <https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm>
-    - Johnson's Algorithm - <https://en.wikipedia.org/wiki/Johnson%27s_algorithm>
+    - Breadth first search BFS, BFS Tree
+    - Depth first search DFS, DFS Tree
+- Union Find
 - Directed Acyclic Graph (DAG)
     - Topological traversal
+    - Check for cycle in graph
+- On weighted graph
+    - Find connected components
+            - Kosaraju's algorithm - <https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm>
+            - Tarjans Algorithm - <https://en.wikipedia.org/wiki/Tarjan%27s_strongly_connected_components_algorithm>
+    - Minimum spanning tree
+        - Kruskal Algorithm
+        - Prim algorithms
+        - Brovuka'a Algorithm
+    - Shortest path from source to all other nodes
+        - Djkstra's Algorithm
+        - Bellman ford's
+    - Shortest path between all nodes to all other node
+        - Floyd Warshall  - <https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm>
+        - Johnson's Algorithm - <https://en.wikipedia.org/wiki/Johnson%27s_algorithm>
+    - Detect negative cycles
 - Connectivity
     - Path between two vertices
     - Bridges in a graph
     - Articulation Points
-    - Eulerian Path
-- Union Find
+- Traveling Salesman Problem (TSP)
+- Network Flow (max flow)
+    - Ford Fulkerson
 
-## Graph Cycle
+## Checking for Graph Cycle
 
 How to detect cycle in graphs (directed or undirected graph).
 Methods which exist are using colors, negative cycle using
@@ -58,9 +59,9 @@ Don't make sense for unweighted graphs.
 
 - rat in the maze
 - n-queens problem
-- m-colouring problem
-- hamiltoninan cycle
-- permutaion of numbers such that the sum of two consequtive numbers is a prefect square
+- m-coloring problem
+- hamiltonian cycle
+- permutation of numbers such that the sum of two consecutive numbers is a prefect square
 
 ## Shortest Paths
 
