@@ -1,5 +1,5 @@
 // all pair shortest path
-// use transtitive property
+// use transitive property
 
 #include <bits/stdc++.h>
 
