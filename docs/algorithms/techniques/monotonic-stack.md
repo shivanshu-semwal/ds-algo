@@ -14,11 +14,39 @@ for(int i=0;i<n;i++){
 }
 ```
 
-## Questions
+- note that in these solutions the amortized time complexity will be $O(n)$
+    even though you will be using a while loop inside a for loop.
 
-- nearest greater to left
-- nearest greater to right
-- nearest smaller to right
-- nearest smaller to left
-- <https://leetcode.com/problems/next-greater-element-i/>
+## Problems
+
+### Nearest greater to Right
+
+```cpp
+int n = arr.size();
+vector<int> ans(n, -1);
+
+stack<int> st;
+for(int i=n-1;i>=0;i--){
+    // check the next greater element to right of this
+    while(!st.empty() && st.top() <= arr[i]){
+        st.pop();
+    }
+    
+    // fill the next greater element
+    if(st.empty()) ans[i] = -1;
+    else ans[i] = st.top();
+    
+    // push curr one, as it can be a candidate for the other elements
+    st.push(arr[i]);
+}
+```
+
+<https://leetcode.com/problems/next-greater-element-i/>
+
+Similarly other variations are possible.
+
+- Nearest greater to left
+- Nearest smaller to right
+- Nearest smaller to left
+
 - <https://leetcode.com/problems/online-stock-span/>
