@@ -5,6 +5,7 @@ int solve(vector<int> p) {
     int n = p.size();
     vector<vector<int>> dp(n+1, vector<int> (n+1, 0));
 
+    // length of subarray you will traverse
     for(int len=2;len<n+1;len++){
         for(int i=1;i<= n-len+1; i++){
             int j=i+len-1;

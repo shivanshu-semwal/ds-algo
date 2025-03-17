@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// state -> (i, j)
 int solve(vector<int> p, int i, int j) {
     if (i == j) return 0; // base condition
     int min = INT_MAX; // answer to return

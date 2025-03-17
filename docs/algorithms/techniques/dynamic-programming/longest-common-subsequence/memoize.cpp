@@ -1,8 +1,12 @@
 #include <bits/stdc++.h>
 using namespaces std;
+
+// cache for results of state (m, n)
 vector<vector<int>> dp;
+
 int lcs(string X, string Y, int m, int n ){
     if (m == 0 || n == 0) return 0;
+    // get results form cache
     if(dp[m][n]!=-1) return dp[m][n];
     if (X[m-1] == Y[n-1]) return dp[m][n] = 1 + lcs(X, Y, m-1, n-1);
     else return dp[m][n] = max(lcs(X, Y, m, n-1), lcs(X, Y, m-1, n));
