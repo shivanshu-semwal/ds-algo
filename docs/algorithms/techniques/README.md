@@ -8,7 +8,7 @@ Here are some common method which are used:
 ## Broad Category of Methods
 
 - [Divide and Conquer](divide-and-conquer.md)
-- [Dynamic Programming](dynamic-programming.md)
+- [Dynamic Programming](dynamic-programming/README.md)
 - [Greedy](greedy.md)
 
 ## Special Techniques
